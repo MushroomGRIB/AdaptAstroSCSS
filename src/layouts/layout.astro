@@ -1,0 +1,31 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!--Добавление favicon (картинка на вкладке)-->
+        <link rel="icon" type="image/svg+xml/x-icon" href="/favicon.svg" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>Грибы</title>
+        <!--Для корректного отображения в старых браузерах-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!--Нормализуем стили https://cdnjs.com/libraries/normalize-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>
